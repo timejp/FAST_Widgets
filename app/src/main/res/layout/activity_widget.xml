@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.timejh.widgets.WidgetActivity"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt7"
+                android:text="7"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt8"
+                android:text="8"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt9"
+                android:text="9"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_plus"
+                android:text="+"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt4"
+                android:text="4"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt5"
+                android:text="5"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt6"
+                android:text="6"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_min"
+                android:text="-"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt1"
+                android:text="1"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt2"
+                android:text="2"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt3"
+                android:text="3"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_mul"
+                android:text="X"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_cancel"
+                android:text="cancel"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt0"
+                android:text="0"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_run"
+                android:text="="
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+
+            <Button
+                android:layout_weight="0.25"
+                android:id="@+id/bt_dvide"
+                android:text="/"
+                android:onClick="onClickBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="120dp"
+        android:text="0"
+        android:gravity="right|center"
+        android:textSize="12dp" />
+
+</RelativeLayout>
