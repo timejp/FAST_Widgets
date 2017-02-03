@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_unit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.timejh.widgets.UnitActivity">
+
+    <Button
+        android:text="Area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_Area"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_Weight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Lenght"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_Length"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/layout"
+        android:layout_below="@+id/bt_Area"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Lenght"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_before"
+                android:layout_weight="0.4" />
+
+            <TextView
+                android:text="→"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:layout_width="100dp"
+                android:textSize="30dp"
+                android:gravity="center" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_after"
+                android:layout_weight="0.4" />
+
+            <Button
+                android:text="↔︎"
+                android:id="@+id/bt_swipe"
+                android:layout_weight="0.1"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/ed_input"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="1" />
+
+                <TextView
+                    android:text="mm"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_before_unit"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="="
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_result"
+                    android:layout_weight="0.1"
+                    android:gravity="right|fill_vertical"
+                    android:textColor="#FFFF0000" />
+
+                <TextView
+                    android:text="cm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_after_unit"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridlayout"
+            android:columnCount="2"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp">
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_rowSpan="1"-->
+                <!--android:layout_columnSpan="1"-->
+                <!--android:layout_columnWeight="0.5"-->
+                <!--android:padding="5dp">-->
+
+                <!--<TextView-->
+                    <!--android:text="0"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textColor="#FFFF0000"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:gravity="right" />-->
+
+                <!--<TextView-->
+                    <!--android:text="mm"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="15dp" />-->
+
+            <!--</LinearLayout>-->
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -25,4 +25,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bt_calculator2" />
+
+    <Button
+        android:text="Constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_constraint" />
+
+    <Button
+        android:text="Unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_unit" />
 </LinearLayout>

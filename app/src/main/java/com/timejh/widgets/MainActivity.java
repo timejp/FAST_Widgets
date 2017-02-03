@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_grid;
     private Button bt_calculator;
     private Button bt_calculator2;
+    private Button bt_constraint;
+    private Button bt_unit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +22,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_grid = (Button) findViewById(R.id.bt_grid);
         bt_grid.setOnClickListener(this);
 
-
         bt_calculator = (Button) findViewById(R.id.bt_calculator);
         bt_calculator.setOnClickListener(this);
 
         bt_calculator2 = (Button) findViewById(R.id.bt_calculator2);
         bt_calculator2.setOnClickListener(this);
 
+        bt_constraint = (Button) findViewById(R.id.bt_constraint);
+        bt_constraint.setOnClickListener(this);
+
+        bt_unit = (Button) findViewById(R.id.bt_unit);
+        bt_unit.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_calculator2:
                 startActivity(new Intent(MainActivity.this, Widget2Activity.class));
+                break;
+            case R.id.bt_constraint:
+                startActivity(new Intent(MainActivity.this, ConstraintActivity.class));
+                break;
+            case R.id.bt_unit:
+                startActivity(new Intent(MainActivity.this, UnitActivity.class));
                 break;
         }
     }

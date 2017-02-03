@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.timejh.widgets.ConstraintActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleButton6"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView3" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/toggleButton6"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton6"
+            android:layout_marginTop="16dp"
+            android:id="@+id/textView9" />
+
+        <CheckBox
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView9"
+            android:text="Apple"
+            android:id="@+id/ch_apple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            app:layout_constraintTop_toTopOf="@+id/ch_apple"
+            app:layout_constraintLeft_toRightOf="@+id/ch_apple"
+            android:layout_marginLeft="24dp"
+            android:text="Banana"
+            android:id="@+id/ch_banana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp" />
+
+        <CheckBox
+            app:layout_constraintTop_toTopOf="@+id/ch_banana"
+            app:layout_constraintLeft_toRightOf="@+id/ch_banana"
+            android:layout_marginLeft="24dp"
+            android:text="Charry"
+            android:id="@+id/ch_charry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp" />
+
+        <TextView
+            android:text="radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRadio"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/ch_apple"
+            app:layout_constraintLeft_toLeftOf="@+id/ch_apple"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup1"
+            android:layout_width="312dp"
+            android:layout_height="53dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRadio"
+            app:layout_constraintLeft_toLeftOf="@+id/tvRadio"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="Anaconda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiobt_anaconda"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Bear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiobt_bear"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiobt_cat"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <TextView
+            android:text="spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvspinner"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup1"
+            app:layout_constraintLeft_toLeftOf="@+id/radiogroup1"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:id="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/tvspinner"
+            app:layout_constraintLeft_toLeftOf="@+id/tvspinner"
+            android:layout_marginTop="16dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:text="seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvseekbar"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            app:layout_constraintLeft_toLeftOf="@+id/spinner"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/tvseekbar"
+            app:layout_constraintLeft_toLeftOf="@+id/tvseekbar"
+            android:layout_marginTop="16dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_seek"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:layout_constraintLeft_toLeftOf="@id/seekBar" />
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".GridActivity" />
-        <activity android:name=".WidgetActivity"></activity>
-        <activity android:name=".Widget2Activity"></activity>
+        <activity android:name=".WidgetActivity" />
+        <activity android:name=".Widget2Activity" />
+        <activity android:name=".ConstraintActivity" />
+        <activity android:name=".UnitActivity"></activity>
     </application>
 
 </manifest>
