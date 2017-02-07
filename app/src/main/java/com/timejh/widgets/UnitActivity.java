@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +16,6 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.Format;
-import java.util.ArrayList;
 
 public class UnitActivity extends AppCompatActivity {
 
